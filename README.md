@@ -1,3 +1,3 @@
 # Kimjeahyo.github.io
 
-[**homework2**](https://Kimjeahyo.github.io/homework2.html)
+[**homework2**](https://kimjeahyo.github.io/homework2.html)
