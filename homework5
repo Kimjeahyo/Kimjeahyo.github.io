@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>카페 메뉴 계산기</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    label { display: block; margin: 5px 0; }
+    button { margin-top: 10px; }
+  </style>
+</head>
+<body>
+
+<h2>☕ 카페 메뉴 계산기</h2>
+
+<label>아메리카노 (3000원): <input type="number" id="coffee" min="0" value="0"></label>
+<label>케이크 (5000원): <input type="number" id="cake" min="0" value="0"></label>
+<label>오렌지 주스 (4000원): <input type="number" id="juice" min="0" value="0"></label>
+
+<button onclick="calculateCafe()">계산하기</button>
+
+<p id="result"></p>
+
+<script>
+function calculateCafe() {
+  const coffee = parseInt(document.getElementById("coffee").value) || 0;
+  const cake = parseInt(document.getElementById("cake").value) || 0;
+  const juice = parseInt(document.getElementById("juice").value) || 0;
+
+  const total = (coffee * 3000) + (cake * 5000) + (juice * 4000);
+
+  document.getElementById("result").textContent = `총 금액은 ${total.toLocaleString()}원입니다.`;
+}
+</script>
+
+</body>
+</html>
